@@ -1,0 +1,145 @@
+<httml>
+    <head>
+        <title> Curso JavaScript</title>
+    </head>
+
+    <body>
+
+        <script>
+           
+           console.log('Hello World !')
+
+           var nome = 'Claudio'  // variaveis
+           var idade = 36
+           var peso = 71
+           var humano = true
+
+
+           var alunos = ['Diego', 'Pedro', 'Rafael']  //array
+           
+           var aluno = {
+            nome : alunos[1],            //propriedades do objeto
+            idade: 36,
+            peso: 71,
+            humano: true
+
+           }; // objeto
+
+           console.log(alunos)
+           console.log(aluno)
+
+           var x =10, y =5
+
+           console.log(x+y)
+          
+           console.log(x%y)
+           console.log(x +=3)
+           console.log(x*=y)          
+           console.log(x/=y)
+                    
+
+           // Funções
+            
+            function soma(num1, num2){
+                return num1+num2
+            }
+            
+            console.log(soma(2,3))
+
+           // Condicionais
+
+           function retornaSexo(sexo){
+               if(sexo === 'M') // Estritamente igual verifica se tanto o valor quanto o tipo são iguais
+                   return 'MASCULINO'
+                   else
+                   return 'FEMININO'
+               
+           }
+
+           console.log(retornaSexo('F'))
+
+           // Switch
+         
+          function retornaSexo2(sexo){
+
+              switch(sexo){
+                  case 'M':
+                  return 'MASCULINO'
+                  break;
+
+                  case 'F':
+                  return 'FEMININO'
+                  break;
+
+                  default:
+                  return 'OUTRO'
+                  break;
+              }
+
+          }
+
+          console.log(retornaSexo2('V'))
+
+          // AND, OR, NOT
+
+                   
+          
+          var sexo = 'M' , idade = 10
+
+             if(sexo ==='M' || idade >=18){
+           console.log('Sexo masculino ou idade maior de 18') 
+               }         
+            else{
+            
+            console.log('Sexo Feminino ou idade menor de 18') 
+            }
+
+            // condição ternaria 
+
+            var sexo2 = 'F' , idade2 = 23
+
+            var retorno = (sexo2==='M')? 'MASCULINO' : 'FEMININO'
+
+            console.log(retorno)
+              
+              // intervalo e timeOut
+
+
+              function incrementa(){
+                  let i=0
+                  console.log(i++)
+              }
+
+               setInterval(incrementa,1000) /* passando a função incrementa sem usar () pois estou passando como parametro
+                                          por isso não se utiliza (). Somente quando estamos chamando a função para executara 
+                                           que usamos ().
+
+                                           O método setInterval() oferecido das interfaces Window e Worker, repetem
+                                            chamadas de funções or executam trechos de código, com um tempo de espera 
+                                            fixo entre cada chamada. Isso retorna um ID único para o intervalo, podendo
+                                             remove-lo mais tarde apenas o chamando clearInterval()
+                                            */
+                function comecarApartir(){
+                  
+                  console.log('Executou depois de determinado intervalo !')
+              }
+
+              setTimeout(comecarApartir, 5000)
+
+
+              /* O método setTimeout () define um timer que executa uma função ou parte de código especificada 
+              quando o timer expirar.*/
+
+
+            /*Recomendado deixar a tag javaScript no final antes do fechamento 
+            da tag body pois o carregamento da pagina é feito de forma vertical 
+            assim o javaScript é carregado por ultimo. O javaScript trabalha com 
+            os elementos em tela (já carregados na pagina) a 
+            DOM (a arvore de elementos reproduzidos em tela já carregados).
+            Caso contrario se o javaScript for carregado primeiro e ele precisar 
+            de um elemento que ainda não foi carregado isso pode ocasioanr um erro.*/
+        
+        </script>
+    </body>
+
+</httml>
